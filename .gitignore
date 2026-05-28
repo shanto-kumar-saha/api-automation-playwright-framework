@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+
+# Playwright test outputs
+playwright-report/
+test-results/
+blob-report/
+
+# Test artifacts (very important)
+*.zip
+*.log
+
+# Environment files (VERY IMPORTANT - security)
+.env
+.env.*
+env/
+.env.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/
+
+# npm debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
