@@ -1,4 +1,4 @@
-# Playwright API Automation Testing (API Client Architecture & CI Integration)
+# Playwright API Automation Testing (API Client Architecture with CI)
 
 This project is a scalable **API Automation Testing Framework** built using **Playwright (JavaScript)**.  
 
