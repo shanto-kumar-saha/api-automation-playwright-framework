@@ -57,6 +57,7 @@ api-automation-framework/
 
 🏗️ Framework Architecture
 
+```bash
 Test Layer (spec files)
         ↓
 API Client Layer (productClient.js)
@@ -66,8 +67,8 @@ Environment Config (env.js)
 Test Data Layer (productData.js)
         ↓
 Playwright API Request Execution
-
-
+```
+---
 
 ## 🧪 API Test Coverage
 
@@ -154,7 +155,7 @@ npx playwright test tests/products/getProducts.spec.js
 
 # View HTML Report
 npx playwright show-report
-
+```
 ---
 
 
