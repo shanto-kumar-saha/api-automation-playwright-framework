@@ -1,4 +1,4 @@
-# API Automation Testing (API Client Architecture & CI Integration)
+# Playwright API Automation Testing (API Client Architecture & CI Integration)
 
 This project is a scalable **API Automation Testing Framework** built using **Playwright (JavaScript)**.  
 
@@ -12,7 +12,7 @@ The framework is designed to validate REST APIs with proper assertions, modular 
 # 👨‍💻 Author Info
 
 * Author: Shanto Kumar Saha
-* Project Type:  API Automation Testing (API Client Architecture & CI Integration)
+* Project Type:  Playwright API Automation Testing (API Client Architecture & CI Integration)
 
 ---
 
@@ -86,7 +86,7 @@ Each API test includes:
 
 ---
 
-## 📊 CI/CD Integration (Ready)
+## CI/CD Integration (Ready)
 
 This framework is designed to support **GitHub Actions CI pipeline**, enabling:
 - Automatic test execution on every push
@@ -125,7 +125,7 @@ Upload Test Report Artifact
 
 ---
 
-## 🔥 Key Skills Demonstrated
+##  Key Skills Demonstrated
 
 - API Automation Testing
 - Playwright Framework Development
