@@ -1,4 +1,4 @@
-# API Automation Testing (API Client Architecture & CI Integration)
+## Playwright API Automation Testing (API Client Architecture with CI)
 
 This project is a scalable **API Automation Testing Framework** built using **Playwright (JavaScript)**.  
 
@@ -9,14 +9,14 @@ The framework is designed to validate REST APIs with proper assertions, modular 
 ---
 
 
-# 👨‍💻 Author Info
+## 👨‍💻 Author Info
 
 * Author: Shanto Kumar Saha
-* Project Type:  API Automation Testing (API Client Architecture & CI Integration)
+* Project Type:  Playwright API Automation Testing (API Client Architecture & CI Integration)
 
 ---
 
-# 📌 Project Key Features
+## Project Key Features
 
 ✔ API Client-based Architecture (like POM for API)  
 ✔ Centralized environment configuration (`env.js`)  
@@ -55,8 +55,9 @@ api-automation-framework/
 
 ---
 
-🏗️ Framework Architecture
+## 🏗️ Framework Architecture
 
+```bash
 Test Layer (spec files)
         ↓
 API Client Layer (productClient.js)
@@ -66,10 +67,10 @@ Environment Config (env.js)
 Test Data Layer (productData.js)
         ↓
 Playwright API Request Execution
+```
+---
 
-
-
-## 🧪 API Test Coverage
+##  API Test Coverage
 
 The framework validates the following API operations:
 
@@ -85,7 +86,7 @@ Each API test includes:
 
 ---
 
-## 📊 CI/CD Integration (Ready)
+## CI/CD Integration
 
 This framework is designed to support **GitHub Actions CI pipeline**, enabling:
 - Automatic test execution on every push
@@ -95,7 +96,7 @@ This framework is designed to support **GitHub Actions CI pipeline**, enabling:
 
 ---
 
-# ⚙️ CI Workflow
+## ⚙️ CI Workflow
 
 ```bash
 Developer Push Code
@@ -124,7 +125,7 @@ Upload Test Report Artifact
 
 ---
 
-## 🔥 Key Skills Demonstrated
+##  Key Skills Demonstrated
 
 - API Automation Testing
 - Playwright Framework Development
@@ -137,7 +138,7 @@ Upload Test Report Artifact
 
 ---
 
-#  How to Run Tests
+##  How to Run Tests
 
 ```bash
 # Install dependencies
@@ -154,11 +155,11 @@ npx playwright test tests/products/getProducts.spec.js
 
 # View HTML Report
 npx playwright show-report
-
+```
 ---
 
 
-# 📸 Udemy Course Complete Certificate
+## 📸 Udemy Course Complete Certificate
 
 ![Playwright Automation Framework With JavaScript](https://github.com/shanto-kumar-saha/Playwright_WebAutomation1/assets/122052172/a86a3335-6811-41df-a8e3-972675f4ceb5)
 
