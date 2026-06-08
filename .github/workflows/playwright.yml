@@ -1,43 +1,57 @@
-name: Playwright API Tests
+name: Playwright Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
+
   pull_request:
-    branches: [ main ]
+    branches: [ main, master ]
 
 jobs:
   test:
+    timeout-minutes: 60
+
     runs-on: ubuntu-latest
 
     steps:
 
-      # Step 1: Checkout code
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    # Checkout code
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
-      # Step 2: Setup Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
+    # Setup Node.js
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+        cache: 'npm'
 
-      # Step 3: Install dependencies
-      - name: Install Dependencies
-        run: npm install
+    # Install dependencies
+    - name: Install Dependencies
+      run: npm ci
 
-      # Step 4: Install Playwright browsers
-      - name: Install Playwright
-        run: npx playwright install --with-deps
+    # Cache Playwright Browsers
+    - name: Cache Playwright Browsers
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-playwright-
 
-      # Step 5: Run API tests
-      - name: Run Playwright Tests
-        run: npx playwright test
+    # Install Playwright browsers
+    - name: Install Playwright Browsers
+      run: npx playwright install firefox --with-deps
 
-      # Step 6: Upload HTML report (optional but industry standard)
-      - name: Upload Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: playwright-report
+    # Run API tests
+    - name: Run Playwright Tests
+      run: npx playwright test
+
+    # Upload HTML report
+    - name: Upload Playwright Report
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30          
